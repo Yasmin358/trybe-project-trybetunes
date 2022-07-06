@@ -4,6 +4,8 @@ import { createUser } from '../services/userAPI';
 import Loading from '../components/Loading';
 
 class Login extends React.Component {
+  mounted = false;
+
   constructor() {
     super();
 
@@ -15,11 +17,22 @@ class Login extends React.Component {
     };
   }
 
-  submitUser = async () => {
+  componentDidMount() {
+    this.mounted = true;
+  }
+
+  componentWillUnmount() {
+    this.mounted = false;
+  }
+
+  submitUser = async (event) => {
+    event.preventDefault();
     const { user } = this.state;
     this.setState({ isLoading: true });
     await createUser({ name: user });
-    this.setState({ isLoading: false, redirect: true });
+    if (this.mounted) {
+      this.setState({ isLoading: false, redirect: true });
+    }
   }
 
   validateUser = (event) => {
