@@ -7,7 +7,6 @@ class Search extends React.Component {
 
     this.state = {
       buttonDisabled: true,
-      input: '',
     };
   }
 
