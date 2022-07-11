@@ -23,8 +23,3 @@ ol {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
-ol li {
-  display: inline-flex;
-  
-}

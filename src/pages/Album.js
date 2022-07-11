@@ -19,7 +19,7 @@ class Album extends React.Component {
     const { match: { params: { id } } } = this.props;
     const result = await getMusics(id);
     const info = result[0];
-    const musics = result.filter((obj) => obj !== info );
+    const musics = result.filter((obj) => obj !== info);
     this.setState({
       isLoading: false,
       albumInfo: info,
