@@ -17,3 +17,14 @@ code {
   display: flex;
   justify-content: center;
 }
+
+ol {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+ol li {
+  display: inline-flex;
+  
+}
