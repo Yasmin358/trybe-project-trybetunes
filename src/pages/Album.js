@@ -44,6 +44,7 @@ class Album extends React.Component {
                     trackName={ music.trackName }
                     previewUrl={ music.previewUrl }
                     trackId={ music.trackId.toString() }
+                    albumMusics={ music }
                   />
                 ))
               }
