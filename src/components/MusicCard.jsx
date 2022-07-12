@@ -1,25 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Loading from './Loading';
+import { addSong } from '../services/favoriteSongsAPI';
 
 class MusicCard extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: false,
+      check: false,
+    };
+    this.addFavoriteSong = this.addFavoriteSong.bind(this);
+  }
+
+  addFavoriteSong() {
+    this.setState({ isLoading: true },
+      async () => {
+        await addSong();
+        this.setState({ isLoading: false, check: true });
+      });
+  }
+
   render() {
-    const { trackName, url } = this.props;
+    const { trackName, trackId, previewUrl } = this.props;
+    const { isLoading, check } = this.state;
     return (
-      <li>
-        <p>{trackName}</p>
-        <audio data-testid="audio-component" src={ url } controls>
-          <track kind="captions" />
-          O seu navegador não suporta o elemento
-          <code>audio</code>
-        </audio>
-      </li>
+      <div>
+        <li>
+          { isLoading ? (<Loading />) : (
+            <>
+              <p>{trackName}</p>
+              <audio data-testid="audio-component" src={ previewUrl } controls>
+                <track kind="captions" />
+                O seu navegador não suporta o elemento
+                <code>audio</code>
+              </audio>
+              <label htmlFor="favorites">
+                <input
+                  data-testid={ `checkbox-music-${trackId}` }
+                  name="favorites"
+                  type="checkbox"
+                  id={ trackId }
+                  checked={ check }
+                  onChange={ this.addFavoriteSong }
+                />
+                Favorita
+              </label>
+            </>)}
+        </li>
+      </div>
     );
   }
 }
 
 MusicCard.propTypes = {
   trackName: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  trackId: PropTypes.string.isRequired,
+  previewUrl: PropTypes.string.isRequired,
 };
 
 export default MusicCard;

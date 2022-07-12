@@ -40,9 +40,10 @@ class Album extends React.Component {
               {
                 albumMusics.map((music) => (
                   <MusicCard
-                    key={ music.trackId }
+                    key={ music.trackId.toString() }
                     trackName={ music.trackName }
-                    url={ music.previewUrl }
+                    previewUrl={ music.previewUrl }
+                    trackId={ music.trackId.toString() }
                   />
                 ))
               }
