@@ -1,0 +1,56 @@
+.formulario {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageLogo {
+  height: 50%;
+  margin: 10px;
+  width: 80%;
+}
+
+.pageLogin {
+  align-items: center;
+  background-color: rgb(13, 11, 51);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.loginInput {
+  border: none;
+  border-color: lightskyblue;
+  border-radius: 22px;
+  box-shadow: 0 0 15px lightskyblue , 0 0 10px lightskyblue;
+  font-size: 18px;
+  height: 30px;
+  margin: 15px 5px;
+  outline: none;
+  padding: 6px 16px;
+  width: 240px;
+}
+
+.buttonLogin {
+  background-color: rgb(13, 11, 51);
+  border: 3px solid #5a0c5a;
+  border-radius: 8px;
+  color: #5a0c5a;
+  cursor: pointer;
+  font-family: Courier New , Courier , monospace;
+  font-size: 20px;
+  font-weight: 600;
+  height: 50px;
+  letter-spacing: 2px;
+  margin: 15px 0;
+  padding: 10px 16px;
+  width: 120px;
+}
+
+.buttonLogin:enabled {
+  border: 3px solid violet;
+  box-shadow: 0 0 6px 0 #f3a5f3 inset , 0 0 12px 0 #f3a5f3;
+  color: violet;
+  text-shadow: 0 0 3px #f3a5f3 , 0 0 2px #f3a5f3;
+}

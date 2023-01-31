@@ -1,0 +1,12 @@
+.loadingContainer {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.loadingContainer img {
+  height: 80px;
+  width: 80px;
+}

@@ -1,0 +1,84 @@
+aside {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Bree serif , serif;
+  font-weight: 400;
+  justify-content: flex-start;
+  width: 300px;
+  z-index: 9999;
+}
+
+.headerContainer {
+  background-color: rgb(13, 11, 51);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 3);
+  height: 100%;
+  position: fixed;
+}
+
+.imageLogo2 {
+  display: flex;
+  height: auto;
+  width: 100%;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+nav li {
+  border: 3px solid #5a0c5a;
+  border-radius: 8px;
+  color: #5a0c5a;
+  cursor: pointer;
+  font-family: Montserrat , Helvetica , Arial , sans-serif;
+  list-style: none;
+  margin-top: 10px;
+  padding: 5px 10px;
+  text-align: center;
+  width: 80%;
+}
+
+.nameUser {
+  color: rgb(247, 222, 83);
+  display: flex;
+  font-family: monospace;
+  font-weight: 400;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 0 0 5px gold , 0 0 10px gold;
+  text-transform: uppercase;
+}
+
+.navigation button {
+  background-color: rgb(13, 11, 51);
+  border: none;
+  border-radius: 8px;
+  color: #90918f;
+  cursor: pointer;
+  font-family: Montserrat , Helvetica , Arial , sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px 8px;
+  width: 90%;
+}
+
+.navigation button:hover {
+  color: white;
+  text-shadow: 0 0 5px #f0ffe5 , 0 0 10px #f0ffe5;
+}
+
+
+.navigation a {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+  text-decoration: none;
+  width: 90%;
+}

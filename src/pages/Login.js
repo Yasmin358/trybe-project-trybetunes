@@ -2,6 +2,8 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from '../components/Loading';
+import Logo from '../images/TrybeTunes2.png';
+import '../css/Login.css';
 
 class Login extends React.Component {
   mounted = false;
@@ -48,24 +50,26 @@ class Login extends React.Component {
     const { buttonDisabled, isLoading, redirect } = this.state;
 
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className="pageLogin">
         {isLoading ? (<Loading />) : (
-          <form>
-            <label htmlFor="login">
-              <input
-                type="text"
-                data-testid="login-name-input"
-                id="login"
-                onChange={ this.validateUser }
-              />
-            </label>
+          <form className="formulario">
+            <img src={ Logo } alt="Logo" className="imageLogo" />
+            <input
+              type="text"
+              data-testid="login-name-input"
+              id="loginInput"
+              onChange={ this.validateUser }
+              placeholder="Digite seu nome aqui"
+              className="loginInput"
+            />
             <button
               type="submit"
               data-testid="login-submit-button"
               disabled={ buttonDisabled }
               onClick={ this.submitUser }
+              className="buttonLogin"
             >
-              Entrar
+              ENTRAR
             </button>
           </form>
         )}

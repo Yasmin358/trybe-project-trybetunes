@@ -1,0 +1,80 @@
+.containerInput {
+  align-items: center;
+  background-color: lightgrey;
+  border: 1px solid grey;
+  border-radius: 50px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 1px;
+  padding-left: 10px;
+  width: 500px;
+}
+
+.containerInput button, .buttonAlbum {
+  background-color: #ff0267;
+  border-radius: 50px;
+  border-style: none;
+  box-shadow: 0 -3px 8px 0 #c4014f inset;
+  color: white;
+  cursor: pointer;
+  font-family: Montserrat , sans-serif;
+}
+
+.containerInput button {
+  font-size: 16px;
+  height: 40px;
+  margin-right: 4px;
+  outline: none;
+  padding: 5px 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.containerInput button:active, .buttonAlbum:active {
+  box-shadow: 0 3px 8px 0 #c4014f inset;
+}
+
+.containerInput button:hover, .buttonAlbum:hover {
+  box-shadow: 0 0 0 0;
+}
+
+.containerInput input {
+  background: none;
+  border: 0;
+  font-family: Montserrat , sans-serif;
+  font-size: 20px;
+  height: 40px;
+  outline: none;
+  padding: 0;
+  width: 100%;
+}
+
+.containerInput:hover {
+  border-color: lightskyblue;
+  box-shadow: 0 0 15px lightskyblue , 0 0 10px lightskyblue;
+}
+
+.containerResult {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.containerResult p, .null {
+  color: white;
+}
+
+.result {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+.header b {
+  color: gold;
+  margin-left: 5px;
+}
+

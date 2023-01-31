@@ -1,0 +1,90 @@
+.musicContainer {
+  align-items: center;
+  background: #bfd0ff33;
+  border-radius: 16px;
+  box-shadow: 0 0 20px 0 lightblue inset , 0 0 10px 0 lightblue inset;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  padding-bottom: 15px;
+  width: 80%;
+}
+
+.musicContainer ol {
+  margin: 6px 0;
+  padding: 0;
+}
+
+.albumInfo {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat , sans-serif;
+}
+
+.albumInfo h2, .albumInfo h3 {
+  margin: 5px 10px;
+}
+
+.artistName {
+  color: gold;
+}
+
+.albumName {
+  color: white;
+  text-shadow: 0 0 3px  lightcoral , 0 0 5px lightcoral;
+  word-spacing: -3px;
+}
+
+.albumYear {
+  color: #ff0267;
+  text-shadow: 0 0 3px  #c4014f , 0 0 4px #c4014f;
+}
+
+.albumHeader {
+  align-items: center;
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  margin: 10px;
+  width: 90%;
+}
+
+.music {
+  align-items: center;
+  border-bottom: #bfd0ff 2px solid;
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  margin: 0 10px;
+}
+
+.musicInfo {
+  display: flex;
+  font-family: monospace;
+  font-size: 14px;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 90%;
+}
+
+audio {
+  height: 24px;
+  padding-right: 10px;
+  width: 400px;
+}
+
+
+.music input {
+  display: none;
+}
+
+.favoriteButton img {
+  width: 30px;
+}
+
+.favoriteButton {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer;
+}

@@ -1,7 +1,9 @@
 import React from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Loading from './Loading';
 import { getUser } from '../services/userAPI';
+import '../css/Header.css';
+import logo from '../images/TrybeTunes2.png';
 
 class Header extends React.Component {
   constructor() {
@@ -22,28 +24,50 @@ class Header extends React.Component {
     render() {
       const { user, isLoading } = this.state;
       return (
-        <header data-testid="header-component">
+        <aside data-testid="header-component">
           { isLoading ? (<Loading />) : (
-            <div>
-              <h1 data-testid="header-user-name">
-                {user}
-              </h1>
-              <BrowserRouter>
-                <ul>
-                  <li>
-                    <Link to="/search" data-testid="link-to-search">Search</Link>
-                  </li>
-                  <li>
-                    <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
-                  </li>
-                  <li>
-                    <Link to="/profile" data-testid="link-to-profile">Profile</Link>
-                  </li>
-                </ul>
-              </BrowserRouter>
+            <div className="headerContainer">
+              <header className="cabecalho">
+                <img src={ logo } alt="Logo do Site" className="imageLogo2" />
+                <h1 data-testid="header-user-name" className="nameUser">
+                  { `Olá,
+                  ${user}!`}
+                </h1>
+              </header>
+              <nav className="navigation">
+                <Link to="/search" data-testid="link-to-search">
+                  <button type="button">
+                    BUSCAR
+                  </button>
+                </Link>
+
+                <Link
+                  to="/favorites"
+                  data-testid="link-to-favorites"
+                >
+                  <button type="button">
+                    FAVORITOS
+                  </button>
+                </Link>
+
+                <Link to="/profile" data-testid="link-to-profile">
+                  <button type="button">
+                    PERFIL
+                  </button>
+                </Link>
+                <Link to="/" data-testid="link-to-profile">
+                  <button
+                    type="button"
+                    data-testid="logout-button"
+                    className="buttonLogout"
+                  >
+                    SAIR
+                  </button>
+                </Link>
+              </nav>
             </div>
           )}
-        </header>
+        </aside>
       );
     }
 }

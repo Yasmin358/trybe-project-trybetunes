@@ -1,0 +1,12 @@
+.profileContainer img {
+  transform: rotate(350deg);
+}
+
+.profileContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 15px;
+  width: 100%;
+}
