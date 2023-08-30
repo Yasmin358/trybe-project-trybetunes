@@ -8,6 +8,7 @@
 
 <p align="center">
   <a href="#funcionalidades">Funcionalidades</a> •
+  <a href="#atualizações">Futuras Atualizações</a> •
   <a href="#demostração">Demostração</a> •
   <a href="#tecnologias-habilidades">Tecnologias e Habilidades</a> •
   <a href="#acesso-ao-projeto">Acesso ao projeto</a> •
@@ -21,6 +22,10 @@
 -Visualizar as músicas de um álbum selecionado; <br />
 -Reproduzir uma prévia das músicas deste álbum; <br />
 -Favoritar e desfavoritar músicas; <br />
+
+<h3 id="atualizações"> Futuras Atualizações </h3>
+  • Terminar página de Favoritos - Requisitos 11 e 12 <br />
+  • Terminar página de Perfil - Requisitos 13 e 14 <br />
 
 <h3 id="demostração"> 🔭 Demostração </h3>
 
